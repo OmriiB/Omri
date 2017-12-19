@@ -1,19 +1,20 @@
 package Tools;
 
 import java.io.BufferedReader;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import de.micromata.opengis.kml.v_2_2_0.Document;
 import de.micromata.opengis.kml.v_2_2_0.Icon;
 import de.micromata.opengis.kml.v_2_2_0.IconStyle;
 import de.micromata.opengis.kml.v_2_2_0.Kml;
-import de.micromata.opengis.kml.v_2_2_0.TimePrimitive;
 import de.micromata.opengis.kml.v_2_2_0.TimeStamp;
+
+/**
+ * @author This class create KML file.
+ */
 
 public class CreateKml {
 
@@ -60,8 +61,8 @@ public class CreateKml {
 		int check = 0;
 		int numWifi;
 
-		/*
-		 * Copy information from Csv file to Kml file
+		/**
+		 @param Copy information from Csv file to Kml file
 		 */
 
 		while (str != null) {
@@ -94,7 +95,7 @@ public class CreateKml {
 	}
 
 	/**
-	 * This function change syntax for kml file and convert to TimeStamp
+	 @param This function change syntax for kml file and convert to TimeStamp
 	 */
 	private static TimeStamp StringTime(String time) {
 		TimeStamp timeStamp = new TimeStamp();
@@ -107,7 +108,7 @@ public class CreateKml {
 	}
 
 	/**
-	 * This function get power signal and set icon as per value green<yellow<red
+	 @param This function get power signal and set icon as per value green<yellow<red
 	 */
 	private static String color(String signal) {
 		int a = Integer.parseInt(signal);

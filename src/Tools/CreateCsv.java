@@ -6,7 +6,6 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
-
 import Filters.Filter;
 import Objects.Point3D;
 import Objects.WiFi;
@@ -28,7 +27,7 @@ public class CreateCsv {
 		StringBuilder builder = new StringBuilder();
 		PrintWriter pw = null;
 		try {
-			String finalCsv = "C:\\Users\\RoniGu\\Desktop\\CSVFile\\OneCsv\\" + name + ".csv";
+			String finalCsv = "C:\\Users\\User\\Desktop\\CSVFile\\OneCsv\\" + name + ".csv";
 			pw = new PrintWriter(new File(finalCsv));
 			builder.append("Id,Time,Lat,Lon,Alt,SSID,MAC,Channel,Signal");
 			builder.append("\n");
@@ -97,8 +96,8 @@ public class CreateCsv {
 	}
 	
 	/**
-	*  get filter ,file name and arrayList<wifiList>, and create new CSV who filtered by this filter.
-	* the file name will be the name of the Csv file. 
+	@param  get filter ,file name and arrayList<wifiList>, and create new CSV who filtered by this filter.
+	 the file name will be the name of the Csv file. 
 	*/
 
 	public static void WriteByFilter(ArrayList<WiFiList> One_Csv_File, Filter filter, String FileName) {
@@ -117,16 +116,16 @@ public class CreateCsv {
 	}
 
 	/**
-	*  get arrayList<wifiList>, and create new CSV.
-	* the new csv will represent wifi networks
-	*  that united to same line if they have same date and cordinations. 
+	@param get arrayList<wifiList>, and create new CSV.
+	 the new csv will represent wifi networks
+     that united to same line if they have same date and cordinations. 
 	*/
 	
 	private static void WritertoFinalCsv(ArrayList<WiFiList> CsvFile) {
 		StringBuilder builder = new StringBuilder();
 		PrintWriter pw = null;
 		try {
-			String finalCsv = "C:\\Users\\RoniGu\\Desktop\\CSVFile\\FinalCsv\\FinalCSV.csv";
+			String finalCsv = "C:\\Users\\User\\Desktop\\CSVFile\\FinalCsv\\FinalCSV.csv";
 			pw = new PrintWriter(new File(finalCsv));
 			builder.append(
 					"Id,Time,Lat,Lon,Alt,#WiFi,SSID1,MAC1,Channel1,Signal1,SSID2,MAC2,Channel2,Signal2,SSID3,MAC3,Channel3,Signal3,SSID4,MAC4,Channel4,Signal4,SSID5,MAC5,Channel5,Signal5,SSID6,MAC6,Channel6,Signal6,SSID7,MAC7,Channel7,Signal7,SSID8,MAC8,Channel8,Signal8,SSID9,MAC9,Channel9,Signal9,SSID10,MAC10,Channel10,Signal10");

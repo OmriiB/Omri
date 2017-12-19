@@ -30,7 +30,7 @@ public class Main {
 		Point3D place = null;
 		String FileName;
 
-		File folder = new File("C:\\Users\\RoniGu\\git\\OOP\\CSVFile");
+		File folder = new File("C:\\Users\\User\\Desktop\\CSVFile");
 		ArrayList<WiFiList> Wifilist = readcsv.readcsvFolder(folder);
 		CreateCsv.WriterCsv(Wifilist, "InitCsv");
 
@@ -104,7 +104,7 @@ public class Main {
 		}
 		sc.close();
 
-		String finalCsv = "C:\\Users\\RoniGu\\git\\OOP\\CSVFile\\BM1\\FinalCsv\\FinalCSV.csv";
+		String finalCsv = "C:\\Users\\User\\Desktop\\CSVFile\\FinalCsv\\FinalCSV.csv";
 		File file1 = new File(finalCsv);
 		CreateKml.csvtokml(file1);
 
